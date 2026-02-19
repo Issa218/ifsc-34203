@@ -1,0 +1,82 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/* Fix Clearing Bugs */
+
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+main {
+/* background-image: url(../img/grid-1.png); */
+width:980px;
+margin: 20px auto; 
+border: double 3px black;
+display: grid;
+grid-template-columns: repeat(6, 1fr) ;
+grid-template-rows: auto;
+
+}
+
+header.primary {
+/*  width:940px; */
+ background: rgba(71, 32, 78, 0.459);
+
+ grid-column-start:1;
+ grid-column-end:7;
+ grid-row-start: 1;
+ grid-row-end:3;
+ 
+}
+
+#content{
+  display:grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+ grid-column-start:1;
+ grid-column-end:5;
+ grid-row-start: 4;
+ grid-row-end:6;
+
+}
+
+#blog{
+/*   width:620px; */
+  background: rgba(114, 75, 122, 0.459);
+ 
+ grid-column-start:1;
+ grid-column-end:5;
+ grid-row-start:1 ;
+ grid-row-end:6;
+
+}
+
+aside {
+  background: rgba(81, 40, 88, 0.459);
+  
+  grid-column-start:4;
+ grid-column-end:7;
+ grid-row-start: 5;
+ grid-row-end:7;
+
+}
+
+footer.primary{
+ background: rgba(81, 40, 88, 0.459);
+ grid-column-start:1;
+ grid-column-end:7;
+ grid-row-start:6 ;
+ grid-row-end:7;
+}
