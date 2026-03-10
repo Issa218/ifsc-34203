@@ -6,10 +6,24 @@ html {
 }
 
 /*--------Utility Class--------*/
-.container{
+/* .container{
   margin:auto;
   padding:40px;
 
+} */
+
+
+
+@media (orientation: landscape) {
+  body {
+    flex-direction: column;
+  }
+}
+
+@media (orientation: portrait) {
+  body {
+    flex-direction: row;
+  }
 }
 
 
@@ -19,23 +33,21 @@ body{
   font-weight: 700;
   font-style: normal;
   color:#2d2d2d;
+  text-align: center;
+  border: dashed #3171C6 4px;
   width: 90vw;
   margin:40px auto;
   max-width:980px;
-   
 }
   
 .container{
   margin: auto;
-  padding: 40px;
-  
+  padding: 40px; 
 }
 
 h1{
   text-align: center;
 }
-
-
 
 a{
 color:#3171C6;
@@ -43,10 +55,20 @@ text-decoration: none;
 
 }
 
-nav ul li{
+ nav{
+    padding:1px;
+  }
 
-}
+   nav li{
+    list-style-type: none;
+   }
 
-li::marker {
-  
-}
+   nav ul{
+    display:grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 8px;
+    padding: 20px 20px ; 
+    
+   }
+
+
