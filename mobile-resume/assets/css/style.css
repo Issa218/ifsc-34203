@@ -20,7 +20,7 @@ main{
 }
 
 .container{
-  width:420px;
+  max-width: 680px;
   margin: 0px auto;
   background-color: var(--background-color);
 }
@@ -28,7 +28,7 @@ main{
 
 img {
   max-width: 100%;
-  border:solid 1px var(--accent-color2);
+  border:solid 2px var(--accent-color2);
 }
 
 
@@ -36,10 +36,15 @@ body {
   background: var(--accent-color);
   color: var(--accent-color2);
   line-height: 1.4;
+  padding:20px;
 }
+
+
 main {
   padding: 1px 20px;
 }
+
+
 
 main h1 {
   display: flex;
@@ -49,10 +54,11 @@ main h1 {
   
 }
 
+
 main h1:before,
 main h1:after {
   background-color: var(--accent-color);
-  content: "\a0";
+  content: "\a0"; /*line design by name*/
   flex-grow: 1;
   height: 2px;
   position: relative;
@@ -64,22 +70,39 @@ main h1:before {
   margin-right: 15px;
 }
 
+
 main h1:after {
   margin-left: 15px;
 }
+
 
 a:link,
 a:visited {
   color: var(--accent-color);
 }
 
+#experience, #education{
+  text-align: center;
+}
+
+
+#skills{
+  text-align: center;
+  list-style-position: inside; /*to keep the list type in the center with text*/
+}
+
+/* Nav*/
+
 nav {
   padding: 2px;
+
 }
+
 
 nav li {
   list-style-type: none;
 }
+
 
 nav ul {
   display: grid;
@@ -87,10 +110,9 @@ nav ul {
   padding: 10px 10px 0px 10px;
 }
 
-nav a:hover {
-  background: var(--accent-color);
-  transition: background-color 0.5s ease;
-}
+/* nav a:hover{
+  color:var(--accent-color);
+} */
 
 nav a:link, nav a:visited {
   display: block;
@@ -98,13 +120,44 @@ nav a:link, nav a:visited {
   text-decoration: none;
   padding: 8px 16px;
   border: 1px solid var(--accent-color);
-  color: var(--accent-color);
   text-transform: uppercase;
   font-size: 0.75rem;
-  background:var(--accent-color2);
+  background:var(--accent-color2); /*box color*/
+  color: var(--background-color); /*text color */
+}
+/* Nav*/
+
+
+/* other links*/
+.related-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.related-links a {
+  border: 1px solid var(--accent-color);
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--accent-color2);
+  text-transform: uppercase;
+  font-size: 0.75em;
+  background: var(--accent-color2);
   color: var(--background-color);
 }
 
+.related-links a:hover {
+  background:var(--accent-color);
+}
+
+.related-links li {
+  margin-right: 20px;
+}
+/* other links*/
+
+/*Defintion list*/
 dl {
   font-size:0.9rem;
   display: grid;
@@ -125,34 +178,8 @@ dd {
   border-bottom: 1.5px solid var(--accent-color);
 }
 
+/*Defintion list*/
 
-.related-links {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-}
-
-
-.related-links a {
-  border: 1px solid var(--accent-color);
-  padding: 8px 16px;
-  text-align: center;
-  text-decoration: none;
-  color: var(--accent-color2);
-  text-transform: uppercase;
-  font-size: 0.75em;
-  background: var(--accent-color2);
-  color: var(--background-color);
-}
-
-.related-links a:hover {
-  background: rgba(0, 0, 0, 0.95);
-}
-
-.related-links li {
-  margin-right: 20px;
-}
 
 .job,
 .certificate {
@@ -160,10 +187,6 @@ dd {
   padding-bottom: 20px;
 }
 
-.job *[itemprop="jobTitle"],
-.job *[itemprop="name"],
-.job *[itemprop="url"],
-.job *[itemprop="addressLocality"],
 .certificate *[itemprop="name"] {
   display: block;
 }
@@ -173,25 +196,38 @@ dd {
 }
 
 #skills li {
-  list-style-type: square;
+  list-style-type:"\2605";
+}
+
+#skills{
+  border-bottom: 2px solid var(--accent-color);
 }
 
 footer {
   text-align: center;
   padding: 20px 0;
+  color: var(--background-color);
+  font-family: "quokka", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+
 }
+
 
 main.container {
   display: grid;
   grid-template-areas:
     "title"
+    "nav"
     "about"
     "education"
-    "experience"
-    "skills";
+    "skills"
+    "experience";
 }
 
-
+nav{
+  grid-area:nav;
+}
 .page-title {
   grid-area: title;
 }
@@ -206,4 +242,57 @@ main.container {
 }
 #education {
   grid-area: education;
+}
+
+/*Media Query*/
+
+@media screen and (min-width:768px){
+   
+  header.container{
+    max-width:900px;
+  }
+
+  main.container {
+  max-width:900px;
+  grid-template-columns:45% auto;
+  grid-template-areas:
+    "title title"
+    "about about"
+    "education skills"
+    "experience experience"
+
+    ;
+}
+
+#about{
+  display:grid;
+  gap:2em;
+  grid-template-columns: 350px 1fr auto;
+  
+  grid-template-areas: 
+  "nav nav nav"
+  "bio details details"
+  "links links links"
+  ;
+
+}
+
+.bio{
+grid-area:bio
+}
+
+.details{
+  grid-area:details;
+}
+
+.related-links{
+  grid-area:links;
+  padding-bottom:20px;
+  border-bottom: 2px solid #879EBF;
+}
+
+}
+
+@media screen and (min-width:992px){
+
 }
