@@ -1,0 +1,45 @@
+:root{
+    --background-color:#1D312F;
+    --detail-color1:#DEE9BD;
+    --detail-color2:#80866E;
+    --detail-color3:#F6EAC8;
+    --text:#fff;
+}
+
+body{
+    background-color: var(--background-color);
+}
+
+
+
+
+
+
+h1{
+  font-family: "Kirang Haerang", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--detail-color1);
+}
+
+nav{
+border-bottom: solid 3px var(--detail-color1);
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav ul li{
+
+}
+
+nav ul li a{
+  color: var(--detail-color1);
+  text-decoration: none;
+  font-family: "Gluten", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
