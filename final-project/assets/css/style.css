@@ -76,7 +76,7 @@ nav li a:hover{
 
 
 #mains{
-background-image: url(../img/projhero680px.webp);
+background-image: url(../img/main680px.webp);
   background-repeat: no-repeat;
   position: relative;
   background-size: cover;      
@@ -88,7 +88,7 @@ background-image: url(../img/projhero680px.webp);
 
 #sides{
 
-background-image: url(../img/projhero680px.webp);
+background-image: url(../img/sides680px.webp);
   background-repeat: no-repeat;
   position: relative;
   background-size: cover;      
@@ -99,7 +99,7 @@ background-image: url(../img/projhero680px.webp);
 }
 
 #desserts{
-background-image: url(../img/projhero680px.webp);
+background-image: url(../img/dessert680px.webp);
   background-repeat: no-repeat;
   position: relative;
   background-size: cover;      
@@ -236,8 +236,88 @@ p, h3{
 background-color: rgba(255,255,255,0.03);
 }
 
+h1.other{
+  color:var(--detail-color1);
+  text-shadow: 2px 2px var(--detail-color2);
+   
+}
+
+
+#recipe-page{
+  text-align: center;
+  margin:10px;
+}
+
+#recipe-page p{
+  padding:15px;
+}
+
+#recipe-page li{
+  list-style-type: none;
+   font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  color:var(--detail-color1);
+}
+
+.recipe-header{
+  border: var(--detail-color1), 2px dashed;
+}
+
+.recipe-header dt,dd{
+  color:#DEE9BD;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  text-align:center;
+
+}
+
+/* styling of defintion list used from: https://clicknathan.com/web-design/styling-html-5-description-lists-formerly-known-as-definition-lists-properly/ */
+.recipe-header dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.recipe-header dt {
+   float: left;
+    width: 30%;
+    text-align: right;
+    padding: .25em;
+    clear: left;
+}
+
+.recipe-header dd {
+  float: left;
+    width: 60%;
+    padding: .25em 0;
+}
+
+h2{
+  color:var(--detail-color3);
+   font-family: "Gluten", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 1;
+    text-decoration: underline;
+}
+
+h3{
+  font-family: "Kirang Haerang", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color:var(--detail-color3);
+
+}
+
+a{
+  text-decoration: none;
+}
 
 footer{
+
   background-color: var(--background-color);
   color:var(--detail-color1);
   text-align: center;
@@ -261,11 +341,6 @@ footer h6 a:hover{
 
 
 
-
-
-
-
-
 /*------------------------------------ Media Queries------------------------ */
 
 @media (min-width: 768px) {
@@ -275,10 +350,45 @@ footer h6 a:hover{
   position: relative;
   background-size: cover;      
   background-position: center;
-  height: 1500px; 
+  height: 535px; 
   width: 100%;
   padding-bottom:100px;
   }
+
+
+  #mains{
+  background-image: url(../img/main800px.webp);
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;      
+  background-position: center;
+  width: 100%;
+  height: 535px; 
+  padding-bottom:100px;
+}
+
+#sides{
+
+background-image: url(../img/sides800px.webp);
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;      
+  background-position: center;
+  width: 100%;
+  height: 535px;
+  padding-bottom:100px;
+}
+
+#desserts{
+background-image: url(../img/dessert800px.webp);
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;      
+  background-position: center;
+  width: 100%;
+  height: 535px;
+  padding-bottom:100px;
+}
 
   #recipe-list {
     grid-template-columns: 1fr 1fr;
@@ -299,6 +409,40 @@ footer h6 a:hover{
   width: 100%;
   padding-bottom:100px;
   }
+
+  #mains{
+  background-image: url(../img/main1200px.webp);
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;      
+  background-position: center;
+  width: 100%;
+  height: 800px; 
+  padding-bottom:100px;
+}
+
+#sides{
+
+background-image: url(../img/sides1200px.webp);
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;      
+  background-position: center;
+  width: 100%;
+  height: 800px; 
+  padding-bottom:100px;
+}
+
+#desserts{
+background-image: url(../img/dessert1200px.webp);
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;      
+  background-position: center;
+  width: 100%;
+  height: 800px; 
+  padding-bottom:100px;
+}
 
   #recipe-list {
     grid-template-columns: 1fr 1fr 1fr;
@@ -352,8 +496,6 @@ nav ul li a{
 
 
 
-
-
 @media (min-width: 1200px){
 
   #title{
@@ -363,9 +505,43 @@ nav ul li a{
   background-size: cover;      
   background-position: center;
   width: 100%;
-  height: 1300px; 
+  height: 1000px; 
   padding-bottom:100px;
   }
+
+#mains{
+  background-image: url(../img/main2000px.webp);
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;      
+  background-position: center;
+  width: 100%;
+  height: 1000px; 
+  padding-bottom:15px;
+}
+
+#sides{
+
+background-image: url(../img/sides2000px.webp);
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;      
+  background-position: center;
+  width: 100%;
+  height: 1000px; 
+  padding-bottom:15px;
+}
+
+#desserts{
+background-image: url(../img/dessert2000px.webp);
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;      
+  background-position: center;
+  width: 100%;
+  height: 1000px;  
+  padding-bottom:15px;
+}
 
   #recipe-list {
     grid-template-columns: 1fr 1fr 1fr 1fr;
